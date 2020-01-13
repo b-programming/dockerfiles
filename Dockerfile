@@ -10,11 +10,12 @@ RUN apt-get update \
 
 # nvm environment variables
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_VERSION 4.4.7
+ENV NODE_VERSION 12.14.1
 
 # install nvm
 # https://github.com/creationix/nvm#install-script
-RUN curl --silent -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
+RUN curl --silent -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+
 
 # install node and npm
 RUN source $NVM_DIR/nvm.sh \
